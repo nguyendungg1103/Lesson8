@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui</title>
+</head>
+<body>
+<h2 style="font-size: 30px ;left: 300px ; top: 200px ; position: absolute">Do you love Me</h2>
+<input type="button" value="Yes" onclick="ok()" style="left: 300px ; top: 300px ; position: absolute">
+<input id="No" type="button" value="No" onmouseover="no()" style="left: 350px ; top: 300px ; position: absolute">
+
+<script>
+    function ok() {
+        alert('love you too')
+    }
+    function no(){
+        let x = Math.round(Math.random() * window.innerWidth)
+        let y = Math.round(Math.random() * window.innerHeight)
+        document.getElementById('No').style.left = x + 'px'
+        document.getElementById('No').style.top = y + 'px'
+
+    }
+</script>
+
+</body>
+</html>

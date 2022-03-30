@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyện tập JS</title>
+
+</head>
+<body>
+<script>
+    let height = +prompt('nhập chiều cao');
+    let weight = +prompt ('nhập cân nặng');
+    let bmi = weight/Math.pow(height,2);
+
+    if(bmi<18){
+        document.write('underweight');
+    } else if (bmi<=20.5){
+        document.write('Normal');
+
+    }else if (bmi<30.0){
+        document.write('Overweight');
+    }else {
+        document.write('Obese')
+    }
+</script>
+
+</body>
+</html>

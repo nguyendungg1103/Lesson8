@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+<body>
+<style>
+    td{
+
+        text-align: center;
+        width: 90px;
+        height: 90px;
+
+    }
+    table {
+        border: 1px solid black;
+        width: 400px;
+        height: 400px;
+    }
+    button {
+        width: 90px;
+        height: 90px;
+    }
+
+    input {
+        width: 98%;
+        height: 50px;
+    }
+</style>
+</head>
+<body>
+<table>
+    <tr id="1">
+        <th colspan="4"><input type="text" id="number"></th>
+    </tr>
+    <tr>
+        <td><button onclick="input('(')">(</button></td>
+        <td><button onclick="input(')')">)</button></td>
+        <td><button onclick="input('%')">%</button></td>
+        <td><button onclick="rs()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="input('7')">7</button></td>
+        <td><button onclick="input('8')">8</button></td>
+        <td><button onclick="input('9')">9</button></td>
+        <td><button onclick="input('/')">/</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="input('4')">4</button></td>
+        <td><button onclick="input('5')">5</button></td>
+        <td><button onclick="input('6')">6</button></td>
+        <td><button onclick="input('*')">*</button></td>
+
+    </tr>
+    <tr>
+        <td><button onclick="input('1')">1</button></td>
+        <td><button onclick="input('2')">2</button></td>
+        <td><button onclick="input('3')">3</button></td>
+        <td><button onclick="input('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="input('0')">0</button></td>
+        <td><button onclick="input('.')">.</button></td>
+        <td><button onclick="result()">=</button></td>
+        <td><button onclick="input('+')">+</button></td>
+    </tr>
+
+</table>
+
+<script>
+    function input(value) {
+        document.getElementById('number').value += (value);
+
+
+    }
+
+    function result() {
+        let kq = document.getElementById('number').value;
+        document.getElementById('number').value = eval(kq);
+
+    }
+
+    function rs() {
+        document.getElementById('number').value = '';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> giai phuong bac 2</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>giá trị của a</th>
+        <th>giá trị của b</th>
+        <th>giá trị của c</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="number1"></td>
+        <td><input type="text" id="number2"></td>
+        <td><input type="text" id="number3"></td>
+        <td>
+            <button onclick="kq()">Kết quả</button>
+        </td>
+    </tr>
+</table>
+<p id="ketqua">kết quả :</p>
+
+<script>
+    function kq() {
+        let numberA = document.getElementById('number1').value;
+        let numberB = document.getElementById('number2').value;
+        let numberC = document.getElementById('number3').value;
+        let denta = numberB * numberB - 4 * numberA * numberC;
+        if (numberA == 0) {
+            document.getElementById('ketqua').innerText =parseFloat((-numberC) / numberB);
+
+        }
+        if (denta < 0) {
+            document.getElementById('ketqua').innerText = "vo nghiem"
+        } else if (denta == 0) {
+            document.getElementById('ketqua').innerText =parseFloat((-numberB )/ (2 * numberA));
+        } else {
+            document.getElementById('ketqua').innerText = parseFloat((-numberB + Math.sqrt(denta)) / (2 * numberA) ) + "" +parseFloat(((-numberB - Math.sqrt(denta)) / (2 * numberA)))
+        }
+
+    }
+</script>
+
+
+</body>
+</html>
